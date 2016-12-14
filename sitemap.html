@@ -406,21 +406,22 @@ body{background:#fff}
 #main-wrapper{width:100%;margin:0;padding:0;border:0}
 .post-body{padding:0}
 }
-  #table-outer{padding:7px 10px;margin:0 auto}
+
+ #table-outer{padding:7px 10px;margin:0 auto}
 #table-outer table{width:auto;margin:0 auto}
 #table-outer form{font:inherit}
 #table-outer label{display:block;text-align:right;margin:0 10px 0 0;padding:4px 0 0}
 #table-outer select[disabled]{opacity:.4}
 #post-searcher{display:block;margin:0;padding:0}
-#table-outer input,#table-outer select{width:100%;border:1px solid #dedede;border-radius:5px;margin:0;padding:5px;font-family: Roboto,sans-serif!important;font-size:16px!important;font-weight:500!important;text-transform:capitalize!important;outline:0;color:#333!important;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-#table-outer select option{min-height:1.4em!important;}
-#table-outer input#feed-q{padding:5px 10px!important;}
+#table-outer input,#table-outer select{width:100%;border:1px solid #dedede;border-radius:5px;margin:0;padding:5px;font-family: Roboto,sans-serif;font-size:16px;font-weight:500;text-transform:capitalize;outline:0;color:#333;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+#table-outer select option{min-height:1.4em;}
+#table-outer input#feed-q{padding:5px 10px;}
 #feed-container{background:#fff;display:block;clear:both;margin:0;padding:0;list-style:none;overflow:hidden;position:relative;border-top:none}
 #feed-container li{list-style:none;margin:0;padding:0;border-top:1px solid #eee;color:#555;width:auto;float:left;display:inline}
 #feed-container li .inner{margin:15px 0;height:auto;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis}
 #feed-container li a{text-decoration:none;color:#2C2C2C;font-weight:500}
 #feed-container li a:hover{text-decoration:none;color:#E94141}
-#feed-container li .news-text{margin-top:5px;line-height:1.3em!important}
+#feed-container li .news-text{margin-top:5px;line-height:1.3em}
 #feed-container li img{margin:0 15px 5px 0;padding:7px 7px 7px 0;float:left;display:block;}
 #result-desc{margin:0;padding:0;}
 #result-desc div,#result-desc span{display:block;margin:0;padding:5px 0 7px;color:#D64D52}
@@ -430,14 +431,14 @@ body{background:#fff}
 #feed-nav a,#feed-nav span:hover{color:#1B1B1B}
 #feed-nav a:active,#feed-nav a:hover{color:#555}
 #feed-nav span{cursor:wait}
-@media (max-width:600px){#table-outer table{margin:0 auto;width:100%}
+@media screen and (max-width:600px){#table-outer table{margin:0 auto;width:100%}
 #feed-container,#table-outer{margin:0 auto}
 #feed-container li .inner{margin:5px auto;height:auto}
 #feedContainer li{float:none;display:block;width:auto;height:auto}
-#feed-container li .news-text, #feedContainer:after,#feed-container li img{display:none!important}
+#feed-container li .news-text, #feedContainer:after,#feed-container li img{display:none}
 }
-  .post-body{min-height:300px;background:url(https://lh6.googleusercontent.com/-UKClHRpzskg/VfOm1eLfT7I/AAAAAAAAiQw/1pwwhEsT49I/w220-h19-no/ajax-loader%2B%25281%2529.gif)50% 50% no-repeat!important;}
-
+  
+  
 /*]]>*/
 </style>
 <style amp-boilerplate='amp-boilerplate'>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate='amp-boilerplate'>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -648,8 +649,8 @@ WARIM.ID</span></a>
 <div class='post-header-line-1'></div>
 </div>
 <div class='post-body entry-content' id='post-body-6636334032594521242' itemprop='articleBody'>
-<div id="table-outer">
-<div id="table-outer">
+
+ <div id="table-outer">
 <table><tbody>
 <tr><td><label for="feed-order">Urutkan artikel berdasarkan:</label></td> <td><select id="feed-order"> <option selected="" value="published">Artikel terbaru</option> <option value="updated">Artikel yang terakhir di update</option> </select></td></tr>
 <tr><td><label for="label-sorter">Filter artikel berdasarkan kategori:</label></td> <td><select disabled="" id="label-sorter"> <option selected="">Loading....</option> </select></td></tr>
@@ -672,11 +673,11 @@ _h=d.createElement('a');_h.href='#load-more';_h.innerHTML=cfg.navText;_h.onclick
 o.g.appendChild(_h);o.a.disabled=false;o.b.children[0].disabled=false;},e:function(json){var a=json.feed.category,b='<select id="label-sorter"><option value="" selected disabled>Pilih Kategori...</option>';for(var i=0,len=a.length;i<len;i++){b+='<option value="'+ encodeURIComponent(a[i].term)+'">'+ encodeURIComponent(a[i].term)+'</option>';}
 b+='</select>';o.b.innerHTML=b;o.b.children[0].onchange=function(){o.i=-1;o.f.innerHTML="";o.g.innerHTML=cfg.loading;fn.c(0,this.value,o.k);};}};loadToc=fn.d;loadCategories=fn.e;fn.b(cfg.homePage+'/feeds/posts/summary?alt=json-in-script&start-index='+(o.i+ 1)+'&max-results='+ cfg.maxResults+'&orderby=published&callback=loadToc');fn.b(cfg.homePage+'/feeds/posts/summary?alt=json-in-script&max-results=0&orderby=published&callback=loadCategories');o.a.onchange=function(){o.i=-1;o.f.innerHTML="";o.g.innerHTML=cfg.counting;o.b.children[0].innerHTML=o.b.children[0].innerHTML;fn.c(0,null,this.value);o.k=this.value;};o.c.onsubmit=function(){o.i=-1;o.f.innerHTML="";o.m=o.d.value;fn.c(1,o.d.value,o.k);return false;};}};_toc.init();
 </script>
+
 <div class='clear'></div>
 <div class='blog-feeds'>
 </div>
 </div></div>
-</div>
 </div>
 <div itemprop='mainEntity' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
 <aside id='sidebar-kanan'>
